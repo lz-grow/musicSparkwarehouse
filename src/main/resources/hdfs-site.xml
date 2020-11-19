@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<!--
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License. See accompanying LICENSE file.
+-->
+
+<!-- Put site-specific property overrides in this file. -->
+
+<configuration>
+<!--配置hdfs文件系统的副本数-->
+<property>
+<name>dfs.replication</name>
+<value>3</value>
+</property>
+<!--指定hdfs文件系统的元数据存放目录-->
+<property>
+<name>dfs.namenode.name.dir</name>
+<value>file:///opt/hadoopdata/dfs/name</value>
+</property>
+<!--指定hdfs文件系统的数据块存放目录-->
+<property>
+<name>dfs.datanode.data.dir</name>
+<value>file:///opt/hadoopdata/dfs/data</value>
+</property>
+<!--配置HDFS的web管理地址-->
+<property>
+<name>dfs.http.address</name>
+<value>lz01:50070</value>
+</property>
+<!--配置secondaryNamenode的web管理地址-->
+<property>
+<name>dfs.secondary.http.address</name>
+<value>lz02:50090</value>
+</property>
+<!--配置是否打开web管理-->
+<property>
+<name>dfs.webhdfs.enabled</name>
+<value>true</value>
+</property>
+<!--指定hdfs文件系统权限是否开启-->
+<property>
+<name>dfs.permissions</name>
+<value>false</value>
+</property>
+<property>
+<name>dfs.hosts</name>
+<value>/opt/hadoop-2.7.6/etc/hadoop/dfs.hosts</value>
+</property>
+<property>
+<name>dfs.hosts.exclude</name>
+<value>/opt/hadoop-2.7.6/etc/hadoop/dfs.hosts.exclude</value>
+</property>
+</configuration>

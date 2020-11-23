@@ -9,7 +9,9 @@ object ConfigUitls {
   val HIVE_DATABASE_NAME: String = load.getString("hive.database.name")
   val iflocal: Boolean = load.getBoolean("iflocal")
   val HDFS_PATH: String = load.getString("hdfs.path")
-
+  val MYSQL_USERNAME:String=load.getString("mysql.username")
+  val MYSQL_JDBC_URL:String=load.getString("mysql.jdbc.url")
+  val MYSQL_PASSWORD:String=load.getString("mysql.password")
   //这里定义的常量  共全局去使用
 
 }
